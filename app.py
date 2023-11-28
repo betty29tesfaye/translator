@@ -1,6 +1,7 @@
 import googletrans
 from googletrans import Translator
 import streamlit as st
+import base64
 def add_background_image(image_file):
   with open(image_file, "rb") as image_file:
      encoded_string = base64.b64encode(image_file.read())
