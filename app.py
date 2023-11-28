@@ -20,10 +20,10 @@ add_background_image('bgi.png')
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Translation</span>', unsafe_allow_html=True)
 text_to_translate = st.text_area("Text to Translate", "እግዚያብሔር ፍቅር ነው")
 translator = Translator()
-lang = translator.detect(text_to_translate)
+lang = translator.detect(text_to_translate).lang
 st.write(lang)
 if lang == 'am':
-  translated_txt = translator.translate(text_to_translate, src= "am", dest= "en")
+  translated_txt = translator.translate(text_to_translate, src= lang, dest= 'en')
 else:
-  translated_txt = translator.translate(text_to_translate, dest='am')
+  translated_txt = translator.translate(text_to_translate, src= lang, dest='am')
 st.write(translated_txt)
