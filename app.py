@@ -18,7 +18,7 @@ def add_background_image(image_file):
     )
 add_background_image('bgi.png')   
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Translation</span>', unsafe_allow_html=True)
-text_to_translate = st.text_area("Text to Translate", "Hello")
+text_to_translate = st.text_area("Text to Translate", "እግዚያብሔር ፍቅር ነው")
 translator = Translator()
 lang = translator.detect(text_to_translate)
 if lang == 'am':
