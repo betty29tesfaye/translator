@@ -22,7 +22,7 @@ text_to_translate = st.text_area("Text to Translate", "Hello")
 translator = Translator()
 lang = translator.detect(text_to_translate)
 if lang == 'am':
-  translated_txt = translator.translate(am_txt, src= lang, dest='en')
+  translated_txt = translator.translate(text_to_translate, src= lang, dest='en')
 else:
-  translated_txt = translator.translate(am_txt, src= lang, dest='am')
+  translated_txt = translator.translate(text_to_translate, src= lang, dest='am')
 st.write(translated_txt)
