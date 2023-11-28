@@ -20,7 +20,7 @@ st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:bo
 text_to_translate = st.text_area("Text to Translate", "Hello")
 translator = Translator()
 lang = translator.detect(text_to_translate)
-if(lang == 'am')
+if lang == 'am':
   translated_txt = translator.translate(am_txt, src= lang, dest='en')
 else:
   translated_txt = translator.translate(am_txt, src= lang, dest='am')
