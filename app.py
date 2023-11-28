@@ -18,10 +18,11 @@ def add_background_image(image_file):
     )
 add_background_image('bgi.png')   
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Translation</span>', unsafe_allow_html=True)
-text_to_translate = st.chat_input("Enter text you want to get translated")
-translator = Translator()
-lang = translator.detect(text_to_translate).lang
+st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">Enter text you want to get translated</p>', unsafe_allow_html=True) 
+text_to_translate = st.text_input("Enter text you want to get translated")
 if text_to_translate:
+  translator = Translator()
+  lang = translator.detect(text_to_translate).lang
   if lang == 'am':
     translated_txt = translator.translate(text_to_translate, src= lang, dest= 'en')
   else:
