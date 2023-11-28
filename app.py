@@ -21,6 +21,7 @@ st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:bo
 text_to_translate = st.text_area("Text to Translate", "እግዚያብሔር ፍቅር ነው")
 translator = Translator()
 lang = translator.detect(text_to_translate)
+st.write(lang)
 if lang == 'am':
   translated_txt = translator.translate(text_to_translate, src= "am", dest= "en")
 else:
