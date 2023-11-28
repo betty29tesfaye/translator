@@ -20,7 +20,6 @@ add_background_image('bgi.png')
 st.markdown(f'<span style="background-color:#DFF2FF;color:#0F52BA;font-family:book-antiqua;font-size:24px;">AI App For Translation</span>', unsafe_allow_html=True)
 st.markdown(f'<p style="background-color:#b3cee5;color:#414C6B;">This app translates Amharic to English and any language to Amharic. </p>', unsafe_allow_html=True) 
 text_to_translate = st.text_input("Please enter the text you want to translate (እባከዎ መተርጎም የሚፈልጉትን ይፃፉ)")
-st.button('Translation(ትርጉም)')
 if text_to_translate and st.button('Translation(ትርጉም)'):
   translator = Translator()
   lang = translator.detect(text_to_translate).lang
