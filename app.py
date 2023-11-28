@@ -24,5 +24,5 @@ lang = translator.detect(text_to_translate)
 if lang == 'am':
   translated_txt = translator.translate(text_to_translate, src= "am", dest= "en")
 else:
-  translated_txt = translator.translate(text_to_translate, src= lang, dest='am')
+  translated_txt = translator.translate(text_to_translate, dest='am')
 st.write(translated_txt)
